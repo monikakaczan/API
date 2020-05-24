@@ -23,6 +23,15 @@ app.post('/api/submitEntry', async (req, res) => {
 	}
 })
 
+app.get('/api/getScores', async (req, res) => {
+	try {
+		const scores = await Game.getScores()
+		res.status(200).json(scores)
+	} catch (err) {
+		console.log(err)
+	}
+})
+
 var port = 3000;
 app.listen(port, function() {
 	console.log('Server', process.pid, 'listening on port', port);

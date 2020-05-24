@@ -16,7 +16,7 @@ class Game {
             }
             scores.push(entry)
         }
-
+        return this.getScores(scores)
     }
     //check if the word is a palindrome
     static isPalindrome = (record) => { 
