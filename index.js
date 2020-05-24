@@ -1,6 +1,6 @@
-var express = require('express');
+import express from 'express';
 import Game from './game'
-var app = express();
+const app = express();
 
 app.use(express.static(__dirname));
 app.use(express.json())
@@ -36,3 +36,5 @@ var port = 3000;
 app.listen(port, function() {
 	console.log('Server', process.pid, 'listening on port', port);
 });
+
+export default app;
