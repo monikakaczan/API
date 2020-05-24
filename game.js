@@ -29,6 +29,7 @@ class Game {
     static getScore = (record) => {
         
         let score = 0 
+        // make sure spaces aren't counted as points 
         const input = record.word.replace(/\s/g,"")
 
         for (let i=0; i < input.length; i++) {
@@ -39,6 +40,15 @@ class Game {
 
     static getScores = () => {
 
+        while ( scores.length <= 5 ) {
+            const sorted = scores.sort((a,b) => b.points - a.points)
+            return sorted 
+        } 
+        if ( scores.length > 5) {
+            const sorted = scores.sort((a,b) => b.points - a.points).slice(0,5)
+            return sorted 
+        }
+        return sorted
     }
 }
 
