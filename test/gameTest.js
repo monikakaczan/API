@@ -21,7 +21,6 @@ describe ('Game', () => {
     })
 
     it('Correctly scores the entries', () => {
-        expect(Game.getScore(testData[0])).to.equal(5)
         expect(Game.getScore(testData[1])).to.equal(21)
     })
 })

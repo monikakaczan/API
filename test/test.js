@@ -53,43 +53,29 @@ describe ('App API', () => {
             done()
         })
     })
-    describe('/api/submitEntry', () => {
-        it('submits an entry and returns a name and a score', (done) => {
-            chai
-            .request(app)
-            .post('/api/submitEntry')
-            .send(
-                testData[1]
-            )
-            .end((err, res) => {
-                if (err) done(err);
-                expect(res).to.have.status(200);
-                expect(res).to.be.an('object')
-                expect(res.body).to.eql([ { name: 'user2', points: 21 } ])
-                done()
-            })
-        })
-    })
-   
+    describe('/api/submitEntry', () => {   
     it('does not submit an entry if the input is not a palindrome',  (done) => {
         chai
         .request(app)
         .post('/api/submitEntry')
-        .send(
-            testData[0]
-        )
-        .end((err, res) => {
-            if (err) done(err);
-            expect(res).to.have.status(200);
-            expect(res).to.be.an('object')
-            expect(res.body).to.eql([])
-            done()
+        .send(testData[0])
+        .end(() => {
+                chai.request(app).post('/api/submitEntry').send(testData[2]).end((err, res) => {
+                if (err) done(err);
+                expect(res).to.have.status(200);
+                expect(res).to.be.an('object')
+                expect(res.body).to.eql([{
+                    name: 'user3',
+                    points: 13
+                 }])
+                done()
         })
     })
+})
     
     describe('/api/getScores', () => {
         
-        it('returns max 5 scores', (done) => {
+        it('returns max 5 highest scores', (done) => {
             chai
             .request(app)
             .post('/api/submitEntry')
@@ -118,5 +104,6 @@ describe ('App API', () => {
                     })
                 })
             })
+    })
     })
 })
