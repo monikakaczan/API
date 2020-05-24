@@ -27,9 +27,11 @@ class Game {
     }
 
     static getScore = (record) => {
+        
         let score = 0 
+        const input = record.word.replace(/\s/g,"")
 
-        for (let i=0; i < record.word.length; i++) {
+        for (let i=0; i < input.length; i++) {
             score +=1
         }
         return score 
