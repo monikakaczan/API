@@ -17,6 +17,7 @@ app.post('/api/submitEntry', async (req, res) => {
 			word: req. body. word
 		}
 		const entries = await Game.submitEntry(entry)
+		console.log('entries', entries)
 		res.status(200).json(entries)
 	} catch (err) {
 		console.log(err)
