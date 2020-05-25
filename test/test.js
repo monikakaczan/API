@@ -93,17 +93,16 @@ describe ('App API', () => {
                                                     expect(res).to.have.status(200);
                                                     expect(res.body).to.have.lengthOf(5)
                                                     done()
+                                                });     
                                             })
-                                                    
-                                            })
-                                        })
-                                    })
-                                })
-                            })
-                        })
-                    })
-                })
-            })
-    })
-    })
-})
+                                        });
+                                    });
+                                });
+                            });
+                        });
+                    });
+                });
+            });
+        });
+    });
+});

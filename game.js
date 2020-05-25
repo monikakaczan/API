@@ -31,8 +31,8 @@ class Game {
         let score = 0 
         // make sure spaces aren't counted as points 
         const input = record.word.replace(/\s/g,"")
-
-        for (let i=0; i < input.length; i++) {
+        const l = input.length
+        for (let i=0; i < l; i++) {
             score +=1
         }
         return score 
