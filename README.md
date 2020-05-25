@@ -5,6 +5,8 @@
 ### Tech stack: 
 - [x] JavaScript
 - [x] Node.js
+- [x] Express
+- [x] Nodemon
 
 ### Testing: 
 - [x] Chai
