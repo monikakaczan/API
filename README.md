@@ -14,6 +14,13 @@
 ```bash
 git clone git@github.com:monikakaczan/API.git
 cd API
+```
+❗️before running npm install please run 
+```bash
+npm install --save-dev @babel/core @babel/cli
+```
+and then 
+```bash
 npm install
 npm start
 go to http://localhost:3000 to view in the browser
