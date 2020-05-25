@@ -3,7 +3,7 @@
     "@babel/plugin-transform-runtime": "^7.9.6",
     "@babel/preset-env": "^7.0.0",
     "@babel/runtime": "^7.9.6",
-    "babel-cli": "^7.0.0",
+    "babel-cli": "7.0.0",
     "babel-preset-es2015": "^7.0.0",
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
@@ -12,8 +12,7 @@
     "request": "^2.88.2",
     "response": "^0.18.0",
     "rest": "^2.0.0",
-    "should": "^13.2.3",
-    "bl": ">=0.9.5"
+    "should": "^13.2.3"
   },
   "scripts": {
     "start": "node_modules/.bin/nodemon index.js --exec babel-node --",
