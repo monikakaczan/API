@@ -13,7 +13,7 @@
     "response": "^0.18.0",
     "rest": "^2.0.0",
     "should": "^13.2.3",
-    "sinon": "^9.0.2"
+    "bl": ">=0.9.5"
   },
   "scripts": {
     "start": "node_modules/.bin/nodemon index.js --exec babel-node --",
