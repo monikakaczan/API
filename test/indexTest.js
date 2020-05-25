@@ -2,8 +2,7 @@ import app from '../index';
 
 const chai = require('chai');
 const chaiHttp = require('chai-http');
-const request = require('request');
-const should = require('should');
+
 
 const { expect } = chai;
 chai.use(chaiHttp);
